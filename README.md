@@ -16,14 +16,14 @@ git clone https://github.com/yourusername/NeuroOS.git
 cd NeuroOS
 pip install torch numpy gguf tiktoken fastapi uvicorn sentence-transformers networkx
 ```
-2. Download a GGUF Model
+### 2. Download a GGUF Model
 
 NeuroOS works beautifully with Llama-3 (Q4_K_M is recommended for 8GB+ VRAM).
 
 ```
 wget https://huggingface.co/bartowski/Meta-Llama-3-8B-Instruct-GGUF/resolve/main/Meta-Llama-3-8B-Instruct-Q4_K_M.gguf
 ```
-3. Run the OS
+### 3. Run the OS
 
 Interactive Chat Mode (System 1):
 
@@ -45,7 +45,7 @@ python neuroos.py --model Meta-Llama-3-8B-Instruct-Q4_K_M.gguf --api --api-port 
 
 You can now connect LangChain, AutoGen, or UI frontends (like SillyTavern) to http://localhost:8000/v1.
 
-🛠️ CLI Showcase
+## 🛠️ CLI Showcase
 
 NeuroOS is packed with features accessible directly from the terminal:
 
@@ -67,7 +67,7 @@ AutoForge (Generate Data & Queue LoRA Training):
 python neuroos.py --model model.gguf --forge --topics "Rust Async Programming, Fastapi"
 ```
 
-📜 Why a single file?
+## 📜 Why a single file?
 
 In the spirit of Andrej Karpathy's micrograd and llm.c, NeuroOS is contained entirely within neuroos.py.
 
@@ -75,7 +75,7 @@ Modern AI stacks have become a labyrinth of fragmented libraries, Docker contain
 
 It is a hacker's playground. Fork it, break it, learn from it.
 
-🤝 Contributing
+## 🤝 Contributing
 
 NeuroOS is an experimental Proof of Concept. PRs are welcome! Areas of active development:
 
@@ -85,6 +85,6 @@ Integration with unsloth for the AutoForge background training loop.
 
 Expanding the Symbolic Bridge (Fuzzy Logic constraints).
 
-📄 License
+## 📄 License
 
 MIT License.
